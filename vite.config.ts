@@ -15,7 +15,18 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      "@": path.resolve('./src')
-    }
-  }
+      '@': path.resolve('./src'),
+    },
+  },
+  server: {
+    // 设置打开端口号
+    port: 5000,
+    // 配置代理
+    proxy: {
+      '/api':{
+        target: '',
+        changeOrigin: true
+      }
+    },
+  },
 })
