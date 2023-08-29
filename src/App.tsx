@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './views/Login'
+import Login from '@/views/Login'
 
 /* 
  <Route path='/login' element={<Login />} /> 
@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/login' element={<Login />}/>
+        <Route path='/login' element={<Login />} />
       </Routes>
     </BrowserRouter>
   )
