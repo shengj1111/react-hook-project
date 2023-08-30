@@ -9,3 +9,5 @@ npm run lint
 
 ### 修复语法问题
 npm run fix
+
+### node版本 18.16.1
