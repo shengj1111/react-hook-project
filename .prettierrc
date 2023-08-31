@@ -4,5 +4,6 @@
   "tabWidth": 2,
   "jsxSingleQuote": true,
   "embeddedLanguageFormatting": "auto",
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "bracketSpacing": true
 }

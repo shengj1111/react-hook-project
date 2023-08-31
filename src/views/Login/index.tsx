@@ -1,7 +1,7 @@
-function Login() {
+import React from 'react'
+
+export default function Login() {
   return (
-    <div>登录页</div>
+    <div>Login</div>
   )
 }
-
-export default Login

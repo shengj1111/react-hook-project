@@ -1,7 +1,6 @@
 import React from 'react'
-
+import { useLocation } from 'react-router-dom'
 export default function Home() {
-  return (
-    <div>Home</div>
-  )
+  const { state:{id} } = useLocation()
+  return <div>Home{id}</div>
 }
