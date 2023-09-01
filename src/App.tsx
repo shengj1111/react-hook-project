@@ -1,21 +1,11 @@
-import React, { useState } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { useRoutes } from 'react-router-dom'
+import routes from './router/Index'
 
 export default function App() {
-  const [count, setCount] = useState(0)
-  const navigate = useNavigate()
-  function goHome() {
-    navigate('/home', {
-      replace: false,
-      state: {
-        id: 0,
-      },
-    })
-  }
+  const element = useRoutes(routes)
   return (
     <div>
-      <button onClick={goHome}>跳转到home</button>
-      <Outlet />
+      {element}
     </div>
   )
 }
