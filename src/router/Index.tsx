@@ -1,12 +1,12 @@
 import { lazy } from 'react'
 import { withLoding } from '@/utils/routes'
 import { Navigate } from 'react-router-dom'
-const Home = lazy(() => import('@/views/home'))
-const Login = lazy(() => import('@/views/login'))
-const DataLayout = lazy(()=> import('@/layout/dataLayout'))
+import Login from '@/views/login'
+import DataLayout from '@/layout/dataLayout'
+
 const Page1 = lazy(() => import('@/views/page/Page1'))
 const Page2 = lazy(() => import('@/views/page/Page2'))
-
+import userRoutes from './modules/user'
 const routes = [
   {
     path: '/',
@@ -14,7 +14,7 @@ const routes = [
   },
   {
     path: '/',
-    element: withLoding(<DataLayout />),
+    element: <DataLayout />,
     children:[
       {
         path: '/page1',
@@ -24,7 +24,12 @@ const routes = [
         path: '/page2',
         element: withLoding(<Page2 />)
       },
+      ...userRoutes
     ]
+  },
+  {
+    path: '/login',
+    element: <Login />
   }
 ]
 
