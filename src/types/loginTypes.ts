@@ -7,3 +7,4 @@ export interface Actions {
 export interface StateType {
   num: number
 }
+
